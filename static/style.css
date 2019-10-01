@@ -1,0 +1,103 @@
+body{
+    margin:0;
+    display: grid;
+    grid-template-areas: 'header header header header'
+                         'navbar navbar navbar navbar'
+                         'section section section section'
+                         'footer footer footer footer';
+    grid-template-rows: 25vh 10vh 160vh 40vh;
+    /* display: grid;
+    background-color: rgb(255, 226, 145); */
+}
+
+header{
+    grid-area: header;
+    background-color: #64a2d9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav{
+    grid-area: navbar;
+    background-color: #D23B3B;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+nav a{
+    color: white;
+    font-family: 'Anton', sans-serif;
+    font-size: 15pt;
+    text-decoration: none;
+}
+
+nav a:hover{
+    color: yellow;
+}
+
+h1:hover{
+    color: yellow;
+}
+
+header h1{
+    color: white;
+    font-family: 'Anton', sans-serif;
+    font-size: 80pt;
+    margin: 0;
+
+}
+
+section{
+    grid-area: section;
+    background-color: green;
+    background-image: url(images/fundo2.jpg);
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center
+}
+
+
+footer{
+    grid-area: footer;
+    background-color: #D23B3B;;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer div{
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+}
+footer div img{
+    width: 50px;
+    height: 50px;
+}
+
+
+
+/* header{
+    grid-area: header;
+    background-image: url(img/MARVIL-DC.png);
+    background-size: cover;
+    display: flex;
+    justify-content: space-around;
+}
+
+div{
+    width: 50%;
+    height: 100%;
+}
+
+.div h1{
+    font-size: 30pt;
+    color: rgb(17, 2, 2);
+    font-family: 'Pacifico', cursive;
+    font-weight: 100;
+}
+
+section a img{
+    width: 30px; */
