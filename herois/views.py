@@ -5,17 +5,15 @@ from herois.models import Heroi
 from herois.serializers import HeroiSerializer
 
 
-class HeroisWiewSet(viewsets.ModelsViewSet):
+class HeroiViewSet(viewsets.ModelsViewSet):
     filter_backends = [SearchFilter]
-    search_fields = ['nome']
+    search_fields = ['^nome', '^idade']
     queryset = Heroi.objects.all
     serializer_class = HeroiSerializer
 
-def index(request):
-    herois = Heroi.objects.all()
 
-    contexto = {
-        'herois': herois
-    }
+    def index(request):
+        herois = Heroi.objects.all()
+        contexto = { 'herois': herois}
 
-    return render(request, '.html', contexto)
+        return render(request, '.html', contexto)

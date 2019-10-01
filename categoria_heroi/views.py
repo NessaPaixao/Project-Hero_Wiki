@@ -5,7 +5,7 @@ from categoria_heroi.models import Categoria
 from categoria_heroi.serializers import CategoriaSerializer
 
 
-class CategoriaWiewSet(viewsets.ModelsViewSet):
+class CategoriaViewSet(viewsets.ModelsViewSet):
     filter_backends = [SearchFilter]
     search_fields = ['nome']
     queryset = Categoria.objects.all

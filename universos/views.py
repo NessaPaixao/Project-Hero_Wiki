@@ -5,7 +5,7 @@ from universos.models import Universo
 from universos.serializers import UniversoSerializer
 
 
-class UniversoWiewSet(viewsets.ModelsViewSet):
+class UniversoViewSet(viewsets.ModelsViewSet):
     filter_backends = [SearchFilter]
     search_fields = ['nome']
     queryset = Universo.objects.all
